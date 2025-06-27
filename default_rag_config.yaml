@@ -1,0 +1,37 @@
+context_combiner:
+  use_adj_chunks: true
+  use_fourth_chunks: false
+dataset: ''
+embedding_key: 
+embedding_type: huggingface
+embedding_url: BAAI/bge-large-en-v1.5
+mlflow:
+  experiment: test_agent_query_2025-06-27 13:21:58.396807
+parallel_query:
+  batch_size: 3
+query:
+  post_processor:
+  - query_rewrite
+query_rewrite:
+  confidence_threshold: 1
+  prompt: default
+  system_prompt: null
+  user_prompt: null
+search: vector_search
+synthesizer:
+  llm: openai
+  llm_url: gpt-3.5-turbo
+  llmkey: 
+  max_tokens: 2048
+  prompt: default
+vector_search:
+  max_sources: 3
+  rerank: true
+  rerank_topk: 5
+  top_k: 3
+vectorstore: weaviate_vectorstore
+weaviate_vectorstore:
+  auth_key: ''
+  textkey: paperdocs
+  url: ''
+  vectorstore_provider: dkubex

@@ -1,0 +1,30 @@
+adjacent_chunks: true
+batch_size: 32
+embedding_key: 
+embedding_type: huggingface
+embedding_url: BAAI/bge-large-en-v1.5
+filereader:
+- inputs:
+    data_args:
+      split_documents: true
+      unstructured_kwargs:
+        strategy: auto
+    delete: false
+    loader_args:
+      input_dir: /home/sharmistha-choudhury/dfm/config_files/contracts_test
+      recursive: true
+      use_unstructure: true
+metadata:
+- default
+mlflow:
+  experiment: test_agent_1_exp_2025-06-27 10:28:54.891669
+mode: sync
+reader:
+- filereader
+sentence_text_splitter_LC:
+  chunk_overlap: 0
+  chunk_size: 256
+splitter: token_text_splitter
+token_text_splitter:
+  chunk_overlap: 0
+  chunk_size: 256

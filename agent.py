@@ -22,7 +22,7 @@ _htx_cli = (
 
 model = OpenAIModel(
 	client_args={
-		"api_key": "",
+		"api_key": "",#openai key
 	},
     # model_id= "gpt-4o",
     model_id= "gpt-4.1",
@@ -68,17 +68,17 @@ def d3x_emb_list() -> str:
 
 #d3x llm list tool          - Done
 @tool
-def d3x_llms_list():
+def d3x_dataset_list():
     """
-    List all llms models provided by the dkubex using d3x command.
+    List all datasets using d3x command.
 
     """
     try: 
-        result = subprocess.run(["d3x", "llms", "list"], capture_output=True)
+        result = subprocess.run(["d3x", "dataset", "list"], capture_output=True)
         return result.stdout
     except Exception as e:
-        print(f"Error: while listing llm models, {e}") 
-        return f"Error: while listing llm models, {e}"
+        print(f"Error: while listing dataset, {e}") 
+        return f"Error: while listing dataset, {e}"
 
 
 def get_yaml_path(
@@ -140,19 +140,6 @@ def d3x_create_dataset(dataset_name: str, directory_path: str):
         return f"Error: while creating dataset, {e}"
 
 
-@tool
-def d3x_list_datasets():
-    """
-    List datasets using d3x command.
-    """
-
-    try:
-        result = subprocess.run(["d3x", "dataset", "list"], capture_output=True)
-        return result.stdout
-    except Exception as e:
-        print(f"Error: while listing datasets, {e}")
-        return f"Error: while listing datasets, {e}"
-
 
 #d3x delete dataset tool
 @tool
@@ -210,7 +197,7 @@ agent = Agent(model=model,
             tools=[
                 d3x_help,                       # Done
                 d3x_emb_list,                   # Done
-                d3x_llms_list,                  # Done
+                d3x_dataset_list,                  # Done
                 d3x_create_dataset,             # Done
                 d3x_delete_dataset,             # Done
                 d3x_list_serve,                 # Done
@@ -221,7 +208,7 @@ agent = Agent(model=model,
 
 # Message
 # message = sys.argv[1]
-# 
 # response = agent(message)
 # print()
 # print(response)
+

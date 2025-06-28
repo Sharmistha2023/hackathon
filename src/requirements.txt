@@ -1,0 +1,7 @@
+strands-agents
+strands-agents-tools
+strands-agents-builder
+strands-agents[openai]
+beautifulsoup4
+a2a-sdk
+uvicorn

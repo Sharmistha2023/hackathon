@@ -1,0 +1,6 @@
+strands-agents
+strands-agents-tools
+strands-agents-builder
+strands-agents[openai]
+a2a-sdk
+uvicorn

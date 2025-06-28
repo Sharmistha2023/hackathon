@@ -1,0 +1,3 @@
+#!/bin/bash
+
+printf "dkubex\nhttps://a2f54faa9c79745f795eea54ae09d029-f4695fd2fc8f6c01.elb.us-east-1.amazonaws.com/\nyes\napikey\neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2hhcm1pc3RoYS1jaG91ZGh1cnkiLCJ0eXBlIjoidXNlciIsImlkIjoiZjk0Yjc5YjgtZjgzNS00MzIwLTkwNjAtZjlmYTAzYTVkNjNiIn0.JZo3rSW3621HoudMuDaprQiqOfTtQoyhTkYRiAj5RiM" |d3x profile configure
